@@ -75,7 +75,7 @@ if ({}) {
 //JSON
 const javier = {
     "nombre": 'Javier',
-    'apellido': "Tapia Benitez",
+    'apellido': "Tapia",
     edad: 23,
     casado: false,
     hijos: null,
