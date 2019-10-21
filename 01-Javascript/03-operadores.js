@@ -60,3 +60,26 @@ console.log('respuestaMapSome', respuestaMapSome);
 
 const respuestaMapFilter = arreglo.map(r => (r / 2) + 7).filter(y => y < 10);
 console.log('respuestaMapFilter', respuestaMapFilter);
+
+const respuestaFind = arreglo
+    .find(
+        (valorActual, indiceActual, arreglo) => {
+            return valorActual === 8;
+        }
+    );
+console.log('respuestaFind', respuestaFind);
+const respuestaFindIndex = arreglo
+    .findIndex(
+        (valorActual) => {
+            return valorActual === 8;
+        }
+    );
+console.log('respuestaFindIndex', respuestaFindIndex);
+
+const respuestaReduce = arreglo
+    .reduce(
+        (valorInicial, valorActual, indiceActual, arreglo) => {
+            return valorInicial - valorActual;
+        }, 100 // VALOR INICIAL
+    );
+console.log('respuestaReduce', respuestaReduce);
