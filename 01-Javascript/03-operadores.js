@@ -9,10 +9,10 @@ for (const j of arreglo) { //Valores
 const respuestaForEach = arreglo
     .forEach(
         function (valorActual, indiceActual) {
-            valorActual = valorActual + 5;
+            // valorActual = valorActual + 5;
             console.log('valorActual', valorActual);
             console.log('indiceActual', indiceActual);
-            //console.log('arreglo', arreglo);
+            // console.log('arreglo', arreglo);
         }
     );
 console.log('respuestaForEach', respuestaForEach);
