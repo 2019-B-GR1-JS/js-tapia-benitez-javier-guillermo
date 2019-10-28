@@ -66,7 +66,7 @@ console.log('respuestaMapFilter', respuestaMapFilter);
 const respuestaFind = arreglo
     .find(
         (valorActual, indiceActual, arreglo) => {
-            return valorActual === 8;
+            return valorActual === 7;
         }
     );
 console.log('respuestaFind', respuestaFind);

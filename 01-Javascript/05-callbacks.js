@@ -94,3 +94,121 @@ filterLocal(
     }
 );
 
+function someLocal(arreglo, funcion) {
+    let resultado = false;
+    for (let indiceInicial = 0;
+         indiceInicial < arreglo.length;
+         indiceInicial++) {
+        if (funcion(
+            arreglo[indiceInicial],
+            indiceInicial,
+            arreglo)
+        ) {
+            resultado = true;
+            break;
+        }
+    }
+    console.log('resultadoSome', resultado);
+}
+
+someLocal(
+    [1, 2, 3, 4, 5],
+    (valorActual, indiceActual, arreglo) => {
+        return valorActual > 5;
+    }
+);
+
+function everyLocal(arreglo, funcion) {
+    let resultado = true;
+    for (let indiceInicial = 0;
+         indiceInicial < arreglo.length;
+         indiceInicial++) {
+        if (!funcion(
+            arreglo[indiceInicial],
+            indiceInicial,
+            arreglo)
+        ) {
+            resultado = false;
+            break;
+        }
+    }
+    console.log('resultadoEvery', resultado);
+}
+
+everyLocal(
+    [1, 2, 3, 4, 5],
+    (valorActual, indiceActual, arreglo) => {
+        return valorActual < 6;
+    }
+);
+
+function findLocal(arreglo, funcion) {
+    let resultado = undefined;
+    for (let indiceInicial = 0;
+         indiceInicial < arreglo.length;
+         indiceInicial++) {
+        if (funcion(
+            arreglo[indiceInicial],
+            indiceInicial,
+            arreglo)
+        ) {
+            resultado = arreglo[indiceInicial];
+            break;
+        }
+    }
+    console.log('resultadoFind', resultado);
+}
+
+findLocal(
+    [1, 2, 3, 4, 5],
+    (valorActual, indiceActual, arreglo) => {
+        return valorActual === 6;
+    }
+);
+
+function findIndexLocal(arreglo, funcion) {
+    let resultado = -1;
+    for (let indiceInicial = 0;
+         indiceInicial < arreglo.length;
+         indiceInicial++) {
+        if (funcion(
+            arreglo[indiceInicial],
+            indiceInicial,
+            arreglo)
+        ) {
+            resultado = indiceInicial;
+            break;
+        }
+    }
+    console.log('resultadoIndexFind', resultado);
+}
+
+findIndexLocal(
+    [1, 2, 3, 4, 5],
+    (valorActual, indiceActual, arreglo) => {
+        return valorActual === 6;
+    }
+);
+
+function reduceLocal(arreglo, funcion, valorInicial) {
+    let nuevoResultado = valorInicial;
+    for (let indiceInicial = 0;
+         indiceInicial < arreglo.length;
+         indiceInicial++) {
+            nuevoResultado = funcion(
+                nuevoResultado,
+                arreglo[indiceInicial],
+                indiceInicial,
+                arreglo
+            );
+    }
+    console.log('resultadoReduce', nuevoResultado);
+}
+
+reduceLocal(
+    [1, 2, 3, 4, 5],
+    (valorInicial, valorActual, indiceActual, arreglo) => {
+        return valorInicial - valorActual;
+    }
+    ,100
+);
