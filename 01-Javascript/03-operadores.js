@@ -1,3 +1,5 @@
+// 03-operadores.js
+
 const arreglo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 for (const i in arreglo) { //Indices
     console.log('I: ', i);

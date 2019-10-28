@@ -1,3 +1,5 @@
+// 01-variables.js
+
 // JS0N
 // var nombre = "Adrian"; nunca en la vida
 // Mutable (No queremos)
