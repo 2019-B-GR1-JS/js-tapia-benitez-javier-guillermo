@@ -1,3 +1,5 @@
+// 04-funciones.js
+
 function imprimirMensaje(mensaje) {
     if (typeof mensaje === 'number' ||
         typeof mensaje === 'string') {

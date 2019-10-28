@@ -1,4 +1,5 @@
 // 02-objetos.js
+
 // let const
 // -> INMUTABLES (NO CAMBIA)
 // no puede ser REASIGNADO
