@@ -85,6 +85,6 @@ function imprimirDepartamento(
     departamento: Departamento
 ) {
     // const departamentoId = departamento.facultad as number + 1;
-    // const departamentoId = <number>departamento.facultad + 1;
-    const departamentoId = departamento.facultad + 1;
+    const departamentoId = <number>departamento.facultad + 1;
+    // const departamentoId = departamento.facultad + 1;
 }
