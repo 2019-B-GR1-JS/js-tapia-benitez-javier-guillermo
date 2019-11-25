@@ -1,9 +1,17 @@
-<h1>Titulo</h1>
-<img width="200px"
-     height="200px"
-     src="https://www.fundeu.es/wp-content/uploads/2013/02/RecMemes.jpg" alt="">
-<p>Texto</p>
-<button (click)="saludar()"
+<h1>{{titulo}}</h1>
+<!-- {{}} -> Interpolacion -->
+<!-- MOSTRAR HTML -->
+<!-- Acceder a metodos y propiedades de la clase -->
+<img [width]="tamanoImagen"
+     [height]="tamanoImagen"
+     [src]="imagen" alt="">
+<!-- Property Binding -->
+<!-- [atributo]="valor" -> Atributos -->
+<p>{{textoImagen}}</p>
+
+<!-- Event Binding -->
+<!-- (evento)="miFuncion($event)" -> Evento -->
+<button (click)="aumentoSueldo()"
 >
-  Hola
+  {{textoBoton}}
 </button>
