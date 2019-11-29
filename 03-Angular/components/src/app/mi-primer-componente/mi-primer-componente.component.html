@@ -5,13 +5,27 @@
 <img [width]="tamanoImagen"
      [height]="tamanoImagen"
      [src]="imagen" alt="">
+<input type="text" (change)="miFuncion($event)">
+<input type="text" (change)="miFuncion2($event)">
 <!-- Property Binding -->
 <!-- [atributo]="valor" -> Atributos -->
 <p>{{textoImagen}}</p>
 
 <!-- Event Binding -->
 <!-- (evento)="miFuncion($event)" -> Evento -->
-<button (click)="aumentoSueldo()"
+<button (click)="tamanoMas()"
 >
-  {{textoBoton}}
+  {{textoBotonSuma}}
+</button>
+
+<button>
+  {{textoBotonResta}}
+</button>
+
+<button>
+  {{textoBotonDivision}}
+</button>
+
+<button>
+  {{textoBotonMultiplicacion}}
 </button>
