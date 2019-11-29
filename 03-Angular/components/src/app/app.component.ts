@@ -39,8 +39,4 @@ export class AppComponent {
       ojos: undefined,
     }
   ]
-
-  imprimirSueldo(sueldo: string) {
-    console.log(sueldo);
-  }
 }
