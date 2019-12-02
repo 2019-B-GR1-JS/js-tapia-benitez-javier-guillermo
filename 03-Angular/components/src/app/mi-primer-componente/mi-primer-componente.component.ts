@@ -28,7 +28,7 @@ export class MiPrimerComponenteComponent implements OnInit, OnDestroy {
   @Input() // Atributo Propiedad
   public textoBotonDivision: string;
 
-  tamanoImagen = "200";
+  tamanoImagen = '200';
   valor1 = 0;
   valor2 = 0;
   suma = 0;
@@ -56,13 +56,13 @@ export class MiPrimerComponenteComponent implements OnInit, OnDestroy {
   } // La clase está destruida
 
   tamanoMas() {
-    //this.textoBotonSuma = (this.miFuncion()+this.miFuncion2()).toString();
+    // this.textoBotonSuma = (this.miFuncion()+this.miFuncion2()).toString();
     this.tamanoImagen = (Number(this.tamanoImagen) + 10).toString();
-    //this.cambioSueldo.emit(this.textoBotonSuma);
+    // this.cambioSueldo.emit(this.textoBotonSuma);
     this.cambioTamano.emit(this.tamanoImagen);
   }
 
-  operaTodo(){
+  operaTodo() {
     this.suma = this.valor1 + this.valor2;
     this.textoBotonSuma = (this.suma).toString();
     this.resta = this.valor1 - this.valor2;
@@ -90,4 +90,10 @@ export class MiPrimerComponenteComponent implements OnInit, OnDestroy {
 // Instanciar a la clase
 // Clase esta lista
 // Clase se destruye
+
+// Proyecto
+// Base de datos (modelo entidad relacion)
+// Mockup
+// Casos de uso / Historias de usuario
+// 7 u 8 tablas
 

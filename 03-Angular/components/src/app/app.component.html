@@ -4,30 +4,31 @@
   }
 </style>
 <h1>Inicio</h1>
-<app-mi-primer-componente
-  [titulo]="arregloObjetos[0].apellido"
-  [textoImagen]="arregloObjetos[0].nombre"
-  textoBotonSuma="+"
-  textoBotonResta="-"
-  textoBotonDivision="/"
-  textoBotonMultiplicacion="*"
-  [imagen]="arregloObjetos[0].comida"
-></app-mi-primer-componente>
-<app-mi-primer-componente
-  [titulo]="arregloObjetos[1].apellido"
-  [textoImagen]="arregloObjetos[1].nombre"
-  textoBotonSuma="+"
-  textoBotonResta="-"
-  textoBotonDivision="/"
-  textoBotonMultiplicacion="*"
-  [imagen]="arregloObjetos[1].comida"
-></app-mi-primer-componente>
-<app-mi-primer-componente
-  [titulo]="arregloObjetos[2].apellido"
-  [textoImagen]="arregloObjetos[2].nombre"
-  textoBotonSuma="+"
-  textoBotonResta="-"
-  textoBotonDivision="/"
-  textoBotonMultiplicacion="*"
-  [imagen]="arregloObjetos[2].comida"
-></app-mi-primer-componente>
+
+<h2>PIPES!</h2>
+{{fecha | date:'yyyy/MM/dd'}}
+{{sueldo | currency}}
+{{universidad | uppercase}}
+
+<h2>Directivas!</h2>
+
+<p *ngIf="true">SI</p>
+<p *ngIf="false">NO</p>
+<div [hidden]="true">
+  ESTOY OCULTO NO ELIMINADO
+</div>
+
+<ul>
+  <li *ngFor="let nombreVariable of arregloObjetos">
+    <button>A</button>
+    <a href="">LINK</a>
+    <p>{{nombreVariable}}</p>
+    <app-mi-primer-componente
+      [titulo]="nombreVariable.apellido"
+      [textoImagen]="nombreVariable.nombre"
+      [textoBotonSuma]="nombreVariable.sueldo"
+      [imagen]="nombreVariable.comida"
+    ></app-mi-primer-componente>
+  </li>
+</ul>
+
