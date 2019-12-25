@@ -56,6 +56,7 @@ function restar2(a, b) {
 const restar3 = (a, b) => {
     return a - b;
 };
+
 const restar4 = {
     nombre: 'restar',
     restarNumeros: (a, b) => { // Anonymous functions
@@ -71,6 +72,7 @@ const transformarAMayuscula = (letra) => {
 const transformarAMayuscula2 = (letra) => letra.toUpperCase();
 const transformarAMayuscula3 = letra => letra.toUpperCase(); // Solo cuando hay un parametro se pueden quitar los parentesis
 // const filtrarArreglo = arreglo.filter(a => a.id > 4);
+
 const arregloNumerosUno = [1, 2, 3, 4, 5, 6];
 const arregloNumerosDos = [7, 8, 9, 10, 11, 12];
 const arregloUnido = [
@@ -88,6 +90,7 @@ const objetoJavierTapia = {
     ...objetoTapia,
     edad: 12,
 };
+
 console.log(objetoJavierTapia);
 const oJTEnString = JSON.stringify(objetoJavierTapia);
 console.log(oJTEnString);
