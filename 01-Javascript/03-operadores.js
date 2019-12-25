@@ -70,6 +70,7 @@ const respuestaFind = arreglo
         }
     );
 console.log('respuestaFind', respuestaFind);
+
 const respuestaFindIndex = arreglo
     .findIndex(
         (valorActual) => {
