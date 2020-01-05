@@ -1,9 +1,59 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="medium">
+        <ion-img style="width: 130px; height: 40px;" src="assets\icon\logo_multicines.png"></ion-img>
+        <ion-button style="width: 40px; height: 40px;" slot="end" color="medium">
+            <ion-menu-button></ion-menu-button>
+        </ion-button>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content color="medium">
+    <h1>Compra</h1>
+    <br>
+    <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ciudad</h6>
+    <ion-select placeholder="SELECCIONE...">
+        <ion-select-option value="default">SELECCIONE...</ion-select-option>
+        <ion-select-option value="quito">QUITO</ion-select-option>
+        <ion-select-option value="cuenca">CUENCA</ion-select-option>
+    </ion-select>
+    <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Complejo</h6>
+    <ion-select placeholder="SELECCIONE...">
+        <ion-select-option value="batan">BATAN</ion-select-option>
+        <ion-select-option value="cci">C.C.I.</ion-select-option>
+        <ion-select-option value="condado">CONDADO</ion-select-option>
+        <ion-select-option value="mallrio">MALL DEL RIO</ion-select-option>
+        <ion-select-option value="milenium">MILENIUM PLAZA</ion-select-option>
+        <ion-select-option value="recreo">RECREO</ion-select-option>
+        <ion-select-option value="scala">SCALA</ion-select-option>
+    </ion-select>
+    <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fecha</h6>
+    <ion-datetime display-format="DDDD, DD/MM/YY" value="Domingo, 01/05/20"></ion-datetime>
+    <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Película</h6>
+    <ion-select placeholder="Seleccione...">
+        <ion-select-option value="default">Seleccione...</ion-select-option>
+        <ion-select-option value="diamuertos">DIA DE MUERTOS</ion-select-option>
+        <ion-select-option value="cats">CATS</ion-select-option>
+        <ion-select-option value="jexi">JEXI CELULAR SIN FILTRO</ion-select-option>
+        <ion-select-option value="ojodem">OJO DEL DEMONIO</ion-select-option>
+        <ion-select-option value="jumanji2">JUMANJI SIGUIENTE NIVEL</ion-select-option>
+        <ion-select-option value="espiasesc">ESPIAS A ESCONDIDAS</ion-select-option>
+        <ion-select-option value="llegadadiablo">LA LLEGADA DEL DIABLO</ion-select-option>
+        <ion-select-option value="starwarssky">STAR WARS ASCENSO SKYWALKER</ion-select-option>
+        <ion-select-option value="arofinal">EL ARO Cap. FINAL</ion-select-option>
+        <ion-select-option value="oportunidadamar">OTRA OPORTUNIDAD PARA AMAR</ion-select-option>
+        <ion-select-option value="dedicadaex">DEDICADA A MI EX</ion-select-option>
+        <ion-select-option value="frozen2">FROZEN 2</ion-select-option>
+        <ion-select-option value="sonofman">A SON OF MAN</ion-select-option>
+    </ion-select>
+    <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Formato</h6>
+    <ion-select placeholder="Seleccione...">
+        <ion-select-option value="default">Seleccione...</ion-select-option>
+    </ion-select>
+    <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hora</h6>
+    <ion-select placeholder="Seleccione...">
+        <ion-select-option value="default">Seleccione...</ion-select-option>
+    </ion-select>
+    <div class="comprar">
+        <ion-button color="success">COMPRAR</ion-button>
+    </div>
+</ion-content>
