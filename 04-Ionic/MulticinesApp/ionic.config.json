@@ -1,5 +1,7 @@
 {
   "name": "MulticinesApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
