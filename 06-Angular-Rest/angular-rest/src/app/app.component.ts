@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {FILAS} from './constantes/numero-filas-por-tabla';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,12 @@ export class AppComponent implements OnInit {
   title = 'angular-rest';
   url = 'http://localhost:1337';
   usuarios = [];
+  FILAS = FILAS;
+  nombreFiltrado = '';
+  apellidoFiltrado = '';
+  correoFiltrado = '';
+  passwordFiltrado = '';
+
   // INYECCION DE DEPENDENCIAS
   // DEPENDENCIAS -> Servicios!
   constructor(
@@ -30,24 +37,35 @@ export class AppComponent implements OnInit {
     );
     usuarios$
       .subscribe(
-        (usuarios: any[])=>{ // TRY
+        (usuarios: any[]) => { // TRY
           console.log('Usuarios: ', usuarios);
-          this.usuarios = usuarios
+          this.usuarios = usuarios;
         },
-        (error)=>{ // CATCH
+        (error) => { // CATCH
           console.error({
             error: error,
             mensaje: 'Error consultando usuarios'
-          })
+          });
         }
       );
   }
 
-  editar(usuario){
-    console.log('Editando usuario', usuario)
+  editar(usuario) {
+    console.log('Editando usuario', usuario);
   }
 
-  eliminar(usuario){
-    console.log('Eliminado usuario', usuario)
+  eliminar(usuario) {
+    console.log('Eliminado usuario', usuario);
+  }
+
+  usuariosFiltrados() {
+    return this.usuarios.filter(
+      (usuario) => {
+        return usuario.nombre.includes(this.nombreFiltrado)
+          &&usuario.apellido.includes(this.apellidoFiltrado)
+          &&usuario.correo.includes(this.correoFiltrado)
+          &&usuario.password.includes(this.passwordFiltrado);
+      }
+    );
   }
 }
