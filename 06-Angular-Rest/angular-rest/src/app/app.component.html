@@ -1,40 +1,39 @@
-<table>
-  <tr> <!-- table row -->
-    <th>Nombre</th> <!-- table header -->
-    <th>Apellido</th> <!-- table header -->
-    <th>Correo</th> <!-- table header -->
-    <th>Password</th> <!-- table header -->
+<!--<table>
+  <tr> &lt;!&ndash; table row &ndash;&gt;
+    <th>Nombre</th> &lt;!&ndash; table header &ndash;&gt;
+    <th>Apellido</th> &lt;!&ndash; table header &ndash;&gt;
+    <th>Correo</th> &lt;!&ndash; table header &ndash;&gt;
+    <th>Password</th> &lt;!&ndash; table header &ndash;&gt;
   </tr>
-  <tr> <!-- table row -->
-    <td>Adrian</td> <!-- table detail -->
-    <td>Eguez</td> <!-- table detail -->
-    <td>a@a.com</td> <!-- table detail -->
-    <td>1234</td> <!-- table detail -->
+  <tr> &lt;!&ndash; table row &ndash;&gt;
+    <td>Adrian</td> &lt;!&ndash; table detail &ndash;&gt;
+    <td>Eguez</td> &lt;!&ndash; table detail &ndash;&gt;
+    <td>a@a.com</td> &lt;!&ndash; table detail &ndash;&gt;
+    <td>1234</td> &lt;!&ndash; table detail &ndash;&gt;
   </tr>
 </table>
 
 <table>
-  <tr> <!-- table row -->
-    <th>Nombre</th> <!-- table header -->
-    <th>Apellido</th> <!-- table header -->
-    <th>Correo</th> <!-- table header -->
-    <th>Password</th> <!-- table header -->
-    <th>Acciones</th> <!-- table header -->
+  <tr> &lt;!&ndash; table row &ndash;&gt;
+    <th>Nombre</th> &lt;!&ndash; table header &ndash;&gt;
+    <th>Apellido</th> &lt;!&ndash; table header &ndash;&gt;
+    <th>Correo</th> &lt;!&ndash; table header &ndash;&gt;
+    <th>Password</th> &lt;!&ndash; table header &ndash;&gt;
+    <th>Acciones</th> &lt;!&ndash; table header &ndash;&gt;
   </tr>
-  <tr *ngFor="let usuario of usuarios"> <!-- table row -->
-    <td>{{usuario.nombre}}</td> <!-- table detail -->
-    <td>{{usuario.apellido}}</td> <!-- table detail -->
-    <td>{{usuario.correo}}</td> <!-- table detail -->
-    <td>{{usuario.password}}</td> <!-- table detail -->
+  <tr *ngFor="let usuario of usuarios"> &lt;!&ndash; table row &ndash;&gt;
+    <td>{{usuario.nombre}}</td> &lt;!&ndash; table detail &ndash;&gt;
+    <td>{{usuario.apellido}}</td> &lt;!&ndash; table detail &ndash;&gt;
+    <td>{{usuario.correo}}</td> &lt;!&ndash; table detail &ndash;&gt;
+    <td>{{usuario.password}}</td> &lt;!&ndash; table detail &ndash;&gt;
     <td>
       <p-button label="EDITAR" (click)="editar(usuario)">
       </p-button>
       <p-button label="ELIMINAR" (click)="eliminar(usuario)">
       </p-button>
-    </td> <!-- table detail -->
+    </td> &lt;!&ndash; table detail &ndash;&gt;
   </tr>
-</table>
-
+</table>-->
 <p-table [value]="usuariosFiltrados()" [paginator]="true" [rows]="FILAS">
   <ng-template pTemplate="caption">
     Lista de Usuarios
@@ -89,15 +88,6 @@
     </tr>
   </ng-template>
 </p-table>
-
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" value="Sushi">
-  </mat-form-field>
-
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Leave a comment"></textarea>
-  </mat-form-field>
-</form>
+<br>
 
 <router-outlet></router-outlet>
