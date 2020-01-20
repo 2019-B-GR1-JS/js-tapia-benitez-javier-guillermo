@@ -27,4 +27,24 @@ export class UsuarioRestService {
         datos
       );
   }
+
+  buscar(busqueda: string): Observable<any> {
+    let consulta = '';
+    if (busqueda){
+      consulta = '?nombre=' + busqueda;
+    }
+    const urlBuscar = this.url + consulta;
+    return this._httpClient
+      .get(
+        urlBuscar
+      );
+  }
+
+  eliminar(id: number): Observable<any> {
+    const urlEliminar = this.url + '/' + id;
+    return this._httpClient
+      .delete(
+        urlEliminar
+      );
+  }
 }
