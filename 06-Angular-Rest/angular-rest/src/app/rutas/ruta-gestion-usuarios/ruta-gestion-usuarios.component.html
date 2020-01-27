@@ -61,9 +61,12 @@
       <td>{{usuario.password}}</td>
       <td>
         <p-button label="EDITAR" (click)="editar(usuario)">
-        </p-button>
+        </p-button>&nbsp;&nbsp;
         <p-button label="ELIMINAR" (click)="eliminar(usuario)">
-        </p-button>
+        </p-button>&nbsp;&nbsp;
+        <a [routerLink]="['/inicio','gestion-usuarios',usuario.id,'gestion-libros','buscar']">
+          <p-button label="GESTIONAR LIBROS"></p-button>
+        </a>
       </td>
     </tr>
   </ng-template>
